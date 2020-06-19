@@ -45,17 +45,19 @@ function addNametext(e) {
 
 const sory = JSON.parse(localStorage.getItem("text1"));
 
-console.log(sory);
+
 
 // // const inpot2 = document.querySelector(".inbt2");
 function pikName(e) {
 
-    const pickNm = sory[Math.floor(Math.random() * sory.length)];
+
+    const resolt1 = Math.floor(Math.random() * sory.length);
+
+    const pickNm = sory[resolt1];
 
     inpot2.value = pickNm;
 
+
     e.preventDefault()
-
-
 
 }
