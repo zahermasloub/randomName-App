@@ -6,27 +6,35 @@ const btn = document.querySelector(".sbmit");
 const UIAddname = document.querySelector(".addName");
 const lod = document.getElementById("loading");
 const inpot3 = document.querySelector(".resalt");
+const clearBotton = document.querySelector(".clearDatabtn");
+
+
+
 
 
 //Event Handeler 
 
 UIAddname.addEventListener("click", addNametext)
+btn.addEventListener("click", looding);
+clearBotton.addEventListener("click", clearDatainStor)
 
-btn.addEventListener("click", function (e) {
+
+
+
+
+// functions 
+function looding(e) {
 
     inpot3.style.display = "none";
     lod.style.display = "block";
 
 
 
-    setTimeout(pikName, 1000);
+    setTimeout(pikName, 5000);
 
 
     e.preventDefault();
-});
-
-
-// functions 
+}
 
 
 function addNametext(e) {
@@ -76,8 +84,8 @@ function pikName() {
 
     lod.style.display = "none";
 
+}
 
-
-
-
+function clearDatainStor() {
+    localStorage.clear();
 }
