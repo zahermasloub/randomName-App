@@ -10,10 +10,11 @@ const UIAddname = document.querySelector(".addName");
 
 UIAddname.addEventListener("click", addNametext)
 
-btn.addEventListener("click", pikName)
+btn.addEventListener("click", pikName);
 
 
 // functions 
+
 
 function addNametext(e) {
 
@@ -34,20 +35,29 @@ function addNametext(e) {
 
     localStorage.setItem('text1', JSON.stringify(text1));
 
-    alert("SAVED");
+    // alert("SAVED");
+
+    inpot1.value = "";
 
     e.preventDefault();
 
 }
 
+const sory = JSON.parse(localStorage.getItem("text1"));
+
+// console.log(sory);
+
+// // // const inpot2 = document.querySelector(".inbt2");
+function pikName(e) {
+
+    const pickNm = sory[Math.floor(Math.random() * sory.length)];
 
 
-// // const inpot2 = document.querySelector(".inbt2");
-// function pikName() {
 
-//     const pickNm = localStorage.getItem('text1')[Math.floor(Math.random())];
+    inpot2.value = pickNm;
 
-//     inpot2.value = pickNm;
-//     console.log(pickNm);
+    e.preventDefault()
 
-// }
+
+
+}
