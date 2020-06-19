@@ -42,19 +42,19 @@ function addNametext(e) {
     const arrData = inpot1.value
 
     let text1;
-    if (localStorage.getItem("text1") === null) {
+    if (sessionStorage.getItem("text1") === null) {
 
         text1 = [];
 
     } else {
-        text1 = JSON.parse(localStorage.getItem("text1"));
+        text1 = JSON.parse(sessionStorage.getItem("text1"));
 
     }
     text1.push(arrData);
 
 
 
-    localStorage.setItem('text1', JSON.stringify(text1));
+    sessionStorage.setItem('text1', JSON.stringify(text1));
 
     // alert("SAVED");
 
@@ -64,7 +64,7 @@ function addNametext(e) {
 
 }
 
-const sory = JSON.parse(localStorage.getItem("text1"));
+const sory = JSON.parse(sessionStorage.getItem("text1"));
 
 
 
@@ -87,5 +87,5 @@ function pikName() {
 }
 
 function clearDatainStor() {
-    localStorage.clear();
+    sessionStorage.clear()
 }
