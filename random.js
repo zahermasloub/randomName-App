@@ -45,14 +45,12 @@ function addNametext(e) {
 
 const sory = JSON.parse(localStorage.getItem("text1"));
 
-// console.log(sory);
+console.log(sory);
 
-// // // const inpot2 = document.querySelector(".inbt2");
+// // const inpot2 = document.querySelector(".inbt2");
 function pikName(e) {
 
     const pickNm = sory[Math.floor(Math.random() * sory.length)];
-
-
 
     inpot2.value = pickNm;
 
