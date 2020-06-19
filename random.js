@@ -30,7 +30,7 @@ function addNametext(e) {
 
 
 
-    localStorage.setItem(Math.floor(Math.random() * 10), JSON.stringify(text1));
+    localStorage.setItem('text1', JSON.stringify(text1));
 
     alert("SAVED");
 
