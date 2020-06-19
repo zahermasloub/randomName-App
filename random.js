@@ -87,5 +87,5 @@ function pikName() {
 }
 
 function clearDatainStor() {
-    sessionStorage.clear()
+    sessionStorage.clear();
 }
