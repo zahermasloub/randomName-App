@@ -4,13 +4,26 @@ const inpot1 = document.getElementById("b1");
 const inpot2 = document.querySelector(".inbt2");
 const btn = document.querySelector(".sbmit");
 const UIAddname = document.querySelector(".addName");
+const lod = document.getElementById("loading");
+const inpot3 = document.querySelector(".resalt");
 
 
 //Event Handeler 
 
 UIAddname.addEventListener("click", addNametext)
 
-btn.addEventListener("click", pikName);
+btn.addEventListener("click", function (e) {
+
+    inpot3.style.display = "none";
+    lod.style.display = "block";
+
+
+
+    setTimeout(pikName, 1000);
+
+
+    e.preventDefault();
+});
 
 
 // functions 
@@ -47,8 +60,10 @@ const sory = JSON.parse(localStorage.getItem("text1"));
 
 
 
-// // const inpot2 = document.querySelector(".inbt2");
-function pikName(e) {
+
+
+
+function pikName() {
 
 
     const resolt1 = Math.floor(Math.random() * sory.length);
@@ -57,7 +72,12 @@ function pikName(e) {
 
     inpot2.value = pickNm;
 
+    inpot3.style.display = "block";
 
-    e.preventDefault()
+    lod.style.display = "none";
+
+
+
+
 
 }
