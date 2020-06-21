@@ -30,7 +30,7 @@ function looding(e) {
 
 
 
-    setTimeout(pikName, 5000);
+    setTimeout(pikName, 2000);
 
 
     e.preventDefault();
