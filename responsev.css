@@ -4,5 +4,14 @@
         padding: 0;
         box-sizing: border-box;
     }
+.header{
+margin-left: auto;
+}
+
+.card{
+    margin-left: auto;
+}
+
+
 
 }
